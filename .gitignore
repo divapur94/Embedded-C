@@ -1,0 +1,43 @@
+# =========================================
+
+# STM32CubeIDE (.gitignore at My_Workspace)
+
+# =========================================
+
+# Ignore CubeIDE build folders (any depth)
+
+/My_work/target/**/Debug/
+/My_work/target/**/Release/
+
+# Optional: other common build output folders
+
+/My_work/target/**/build/
+/My_work/target/**/Bin/
+/My_work/target/**/Out/
+
+# Object and binary files (anywhere)
+
+*.o
+*.a
+*.d
+*.elf
+*.map
+*.hex
+*.bin
+*.list
+*.srec
+
+# Eclipse / CubeIDE noise
+
+.metadata/
+.settings/
+*.launch
+
+# OS / editor junk
+
+.DS_Store
+Thumbs.db
+*~
+
+# =========================================
+
