@@ -1,0 +1,24 @@
+11:52:59 **** Build of configuration Debug for project 000add ****
+make -j4 all 
+arm-none-eabi-gcc -mcpu=cortex-m7 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f746zgtx.d" -MT"Startup/startup_stm32f746zgtx.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Startup/startup_stm32f746zgtx.o" "../Startup/startup_stm32f746zgtx.s"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DNUCLEO_F746ZG -DSTM32F746ZGTx -DSTM32F7 -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DNUCLEO_F746ZG -DSTM32F746ZGTx -DSTM32F7 -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DNUCLEO_F746ZG -DSTM32F746ZGTx -DSTM32F7 -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc -o "000add.elf" @"objects.list"   -mcpu=cortex-m7 -T"/home/amir/Desktop/My_Workspace/My_work/target/000add/STM32F746ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="000add.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 000add.elf
+ 
+arm-none-eabi-size   000add.elf 
+arm-none-eabi-objdump -h -S  000add.elf  > "000add.list"
+   text	   data	    bss	    dec	    hex	filename
+   5380	    116	   1588	   7084	   1bac	000add.elf
+Finished building: default.size.stdout
+ 
+Finished building: 000add.list
+ 
+11:53:27 **** Incremental Build of configuration Debug for project 000add ****
+make -j4 all 
+arm-none-eabi-size   000add.elf 
+   text	   data	    bss	    dec	    hex	filename
+   5380	    116	   1588	   7084	   1bac	000add.elf
+Finished building: default.size.stdout
+ 
