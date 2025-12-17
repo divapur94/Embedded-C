@@ -8,12 +8,13 @@
 
 /My_work/target/**/Debug/
 /My_work/target/**/Release/
-
-# Optional: other common build output folders
-
 /My_work/target/**/build/
 /My_work/target/**/Bin/
 /My_work/target/**/Out/
+
+# Ignore Eclipse / CubeIDE workspace metadata
+
+/My_work/target/**/.metadata/
 
 # Object and binary files (anywhere)
 
@@ -27,11 +28,11 @@
 *.list
 *.srec
 
-# Eclipse / CubeIDE noise
+# CubeIDE project files that may change locally
 
-.metadata/
-.settings/
-*.launch
+/My_work/target/**/.cproject
+/My_work/target/**/.project
+/My_work/target/**/*.launch
 
 # OS / editor junk
 
